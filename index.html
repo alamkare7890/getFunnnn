@@ -23,12 +23,26 @@
       padding: 15px;
       text-align: center;
     } 
+    .valueError input{
+      padding: 10px 20px;
+      border: 1px solid coral;
+      outline: none;
+      border-radius: none;
+      margin-bottom: 20px;
+
+    }
+    .valueError input:focus,
+    .valueError input:active{
+      border-color: blueviolet;
+
+    }
   </style>
 </head>
 <body>
 
   <div class="valueError">
     <p>😁Press any key, We can idenfity !😜😜😜</p>
+    <input type="text" id="type">
     <div class="value"></div>
   </div>
 
