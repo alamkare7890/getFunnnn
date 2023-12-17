@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Key Indetifier</title>
+  <style>
+    body{
+      height: 100vh;
+    }
+    .valueError{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      flex-direction: column;
+    }
+    .valueError p{
+      margin-bottom: 20px;
+    }
+    .valueError table, .valueError table td, .valueError table th{
+      border: 1px solid;
+      padding: 15px;
+      text-align: center;
+    } 
+  </style>
+</head>
+<body>
+
+  <div class="valueError">
+    <p>😁Press any key, We can idenfity !😜😜😜</p>
+    <div class="value"></div>
+  </div>
+
+  <script>
+    let insert = document.querySelector('.value')
+    window.addEventListener('keydown', function(e){
+      insert.innerHTML = `
+    <div class='color'>
+    <table>
+    <tr>
+      <th>Key</th>
+      <th>Keycode</th> 
+      <th>Code</th>
+    </tr>
+    <tr>
+      <td>${e.key === ' ' ? 'Space' : e.key}</td>
+      <td>${e.keyCode}</td> 
+      <td>${e.code}</td>
+    </tr>
+    <tr>
+      <td colspan='12'>We are right !😂</td>  
+    </tr>
+  </table>
+    </div>
+  `;
+    })
+  </script>
+</body>
+</html>
